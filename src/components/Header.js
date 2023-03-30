@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import Hamburger from "./Hamburger";
+import Cart from "./Cart";
+import Navbar from "./Navbar";
 
 export default function Header() {
   const [nav, setNav] = useState(false);
   const [navButton, setNavButton] = useState(0);
+  const [navAppear , setNavAppear] = useState(false)
+  const[openCart , setOpenCart] = useState(false)
 
   const Inactive = "flex bg-[#F8e0a6] w-full z-10 fixed top-0 ";
   const active =
@@ -26,6 +29,14 @@ export default function Header() {
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
+
+  const navonclick = ()=>{
+    setNavAppear(!navAppear)
+  }
+
+  const cartonclick = () =>{
+    setOpenCart(true)
+  }
 
   return (
     <div>
@@ -114,17 +125,23 @@ export default function Header() {
               Contact Us
             </li>
           </Link>
-          <a className="mr-10 gap-2 flex lg:m-auto  bg-[#583101] p-3 rounded-md hover:cursor-pointer">
+
+          <div className="mr-10 gap-2 flex lg:m-auto  bg-[#583101] p-3 rounded-md hover:cursor-pointer" onClick={cartonclick}> 
             <li className="font-[Poppins] text-base font-normal text-white ">
               CART
             </li>
             <img src="cart.png" className="h-6" />
-          </a>
+          </div>
         </ul>
-        <div className="hidden md:flex items-center ml-auto pr-6 justify-end">
-          <Hamburger/>
+
+        <div className="hidden md:flex items-center ml-auto pr-6 justify-end" onClick={navonclick}>
+          <img src="more.png" className="h-8"/>
         </div>
+       
       </div>
+      <div className="hidden md:flex">
+           <Navbar open={navAppear}/>
+        </div>
     </div>
   );
 }

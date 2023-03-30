@@ -26,25 +26,25 @@ export default function Spaces() {
 
       <div className="flex flex-col ml-40 lg:ml-0 mt-8 xs:mt-4">
         <ul className="flex flex-row gap-[74px] lg:gap-14 md:gap-5 mb-3 sm:hidden">
-          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] ">
+          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] hover:underline hover:cursor-pointer">
             Dining & Resturant
           </li>
-          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] ">
-            Parking Space
-          </li>
-          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] ">
-            Spa
-          </li>
-          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] ">
-            Resort & Pool
-          </li>
-          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] ">
-            Casino
-          </li>
-          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] ">
-            Bedrooms
-          </li>
-          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] ">
+          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] hover:underline hover:cursor-pointer">
+            Parking Space 
+          </li> 
+          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] hover:underline hover:cursor-pointer">
+            Spa 
+          </li> 
+          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] hover:underline hover:cursor-pointer">
+            Resort & Pool 
+          </li> 
+          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] hover:underline hover:cursor-pointer">
+            Casino 
+          </li> 
+          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] hover:underline hover:cursor-pointer">
+            Bedrooms 
+          </li> 
+          <li className="font-[Poppins] text-lg lg:text-sm text-[#121619] hover:underline hover:cursor-pointer">
             Event Spaces
           </li>
         </ul>

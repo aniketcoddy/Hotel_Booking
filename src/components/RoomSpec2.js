@@ -1,16 +1,15 @@
-import React from "react";
+import React from 'react'
 import { data } from "../HotelData";
 
+export default function RoomSpec2(props) {
 
-export default function RoomSpec(props) {
-  
   const Id = props.id
 
   const hotel=data.filter((e)=>(e.id==Id))[0]
 
-  return (
-    <div
-      className={`absolute flex  bg-[#583101] top-[1875px] xs:top-[1773px] lg:top-[1435px] md:top-[1164px] ${
+    return (
+      <div
+      className={`absolute flex  bg-[#583101] top-[2738px] lg:top-[2279px] xm:top-[2922px]  xs:top-[3728px] md:top-[1946px] ${
         props.slider ? "translate-x-0 xs:translate-x-40" : "translate-x-full"
       }  ease-in-out duration-300 h-fit right-0 z-10`}
     >
@@ -65,7 +64,7 @@ export default function RoomSpec(props) {
               <h1 className="text-sm flex text-[white]  items-end pb-4 font-[Poppins] justify-end">
                 per night
               </h1>
-             <div className=" gap-2 flex  border-2 border-white xs:ml-8 h-fit md:ml-5 p-2 m-auto ml-96 lg:ml-28 rounded-md hover:cursor-pointer">
+             <div className=" gap-2 flex  border-2 border-white xs:ml-4 h-fit md:ml-5 p-2 m-auto ml-96 lg:ml-28 rounded-md hover:cursor-pointer">
                 <li className="font-[Poppins] text-base xs:text-sm font-semibold  text-white list-none ">
                   ADD
                 </li>
@@ -76,5 +75,5 @@ export default function RoomSpec(props) {
         </div>
       </div>
     </div>
-  );
-}
+      );
+    }
