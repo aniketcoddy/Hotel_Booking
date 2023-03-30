@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import Cart from "./Cart";
 import Navbar from "./Navbar";
 
-export default function Header() {
+export default function Header(props) {
   const [nav, setNav] = useState(false);
   const [navButton, setNavButton] = useState(0);
   const [navAppear , setNavAppear] = useState(false)
@@ -34,9 +34,6 @@ export default function Header() {
     setNavAppear(!navAppear)
   }
 
-  const cartonclick = () =>{
-    setOpenCart(true)
-  }
 
   return (
     <div>
@@ -126,7 +123,7 @@ export default function Header() {
             </li>
           </Link>
 
-          <div className="mr-10 gap-2 flex lg:m-auto  bg-[#583101] p-3 rounded-md hover:cursor-pointer" onClick={cartonclick}> 
+          <div className="mr-10 gap-2 flex lg:m-auto  bg-[#583101] p-3 rounded-md hover:cursor-pointer" onClick={props.clickon} > 
             <li className="font-[Poppins] text-base font-normal text-white ">
               CART
             </li>
@@ -140,7 +137,7 @@ export default function Header() {
        
       </div>
       <div className="hidden md:flex">
-           <Navbar open={navAppear}/>
+           <Navbar open={navAppear} />
         </div>
     </div>
   );

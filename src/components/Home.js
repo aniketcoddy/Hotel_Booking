@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Cart from './Cart'
 
-export default function Home() {
+export default function Home(props) {
+ 
+
   return (
     <div className='flex justify-center items-center mt-24' id="Home">
       <img src='home.png' className='w-full'/>
@@ -10,9 +12,9 @@ export default function Home() {
         <h2 className='font-[Playfair] text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl xxs:text-lg xm:text-sm text-[#F8e0a6] max-w-5xl text-center'>Welcome To The Place Where Luxury Meets Affordability</h2>
         <a className='text-center justify-center px-6 py-4 sm:py-3 xs:py-2 xxs:px-1 border-solid border-[#F8e0a6] border-[2px] w-44 m-auto h-15 sm:w-32 sm:h-10 xs:w-22 xs:h-9 xxs:w-[92px] hover:bg-[#F8e0a6] hover:cursor-pointer hover:text-[#583101] '><h1 className='font-[Poppins] text-lg sm:text-xs xxs:text-[10px] text-[#F8e0a6]  hover:text-[#583101]'>Explore Now </h1></a>
       </div>
-
+       
       <div>
-       <Cart/>
+       <Cart close={props.open}/>
       </div>
     </div>
   )

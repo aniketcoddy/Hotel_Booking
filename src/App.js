@@ -1,6 +1,6 @@
+import { useState } from "react";
 import "./App.css";
 import AboutUs from "./components/AboutUs";
-import Cart from "./components/Cart";
 import ContactUS from "./components/ContactUS";
 
 import Header from "./components/Header";
@@ -12,11 +12,18 @@ import Spaces from "./components/Spaces";
 import Standard from "./components/Standard";
 
 function App() {
+
+     const [opencart,setOpencart] = useState(false)
+
+     const onclickopen =(e)=>{
+      setOpencart(!opencart)
+      console.log(e.target)
+     }
+
   return (
     <div>
-      <Header />
-      {/* <Cart/>   */}
-      <Home />
+      <Header clickon={onclickopen}/>
+      <Home open={opencart}/>
       <AboutUs />
       <Standard />
       <Premium />
