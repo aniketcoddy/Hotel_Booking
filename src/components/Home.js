@@ -13,7 +13,7 @@ export default function Home(props) {
         <a className='text-center justify-center px-6 py-4 sm:py-3 xs:py-2 xxs:px-1 border-solid border-[#F8e0a6] border-[2px] w-44 m-auto h-15 sm:w-32 sm:h-10 xs:w-22 xs:h-9 xxs:w-[92px] hover:bg-[#F8e0a6] hover:cursor-pointer hover:text-[#583101] '><h1 className='font-[Poppins] text-lg sm:text-xs xxs:text-[10px] text-[#F8e0a6]  hover:text-[#583101]'>Explore Now </h1></a>
       </div>
        
-      <div>
+      <div className='fixed'>
        <Cart close={props.open}/>
       </div>
     </div>

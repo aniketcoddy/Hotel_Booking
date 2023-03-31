@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Cart(props) {
   return (
-    <div className={`absolute -mt-96  bg-[#F8e0a6] w-[816px] ${props.close ?"-translate-x-[832px]":"translate-x-full"} ease-in-out duration-700`} >
+    <div className={`absolute -mt-96  bg-[#F8e0a6]  w-[816px] ${props.close ?"-translate-x-[64px]":"translate-x-full"} ease-in-out duration-700`} >
  
       {/* <div className="flex items-center justify-center mt-72">
         <h1 className="flex text-9xl justify-center text-[#ebc08c] ">
