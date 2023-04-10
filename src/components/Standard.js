@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RoomSpec from "./RoomSpec";
+import RoomSpecContainer from "../Containers/RoomSpecContainer"
 
 export default function Standard() {
   const [slider2 , setSlider2] = useState(false)
@@ -12,7 +13,6 @@ export default function Standard() {
      setSlider2(!slider2)
   }
  
-    console.log(slider2,"test3")
 
   return (
     <div className=" h-fit mt-36" id="Services">
@@ -40,7 +40,7 @@ export default function Standard() {
 
       {slider2 && 
       <div>
-       <RoomSpec id={hotelId} slider={slider2} />
+       <RoomSpecContainer id={hotelId} slider={slider2}/>
       </div>
 }               
         <div className="flex flex-row flex-wrap  w-[911px] md:w-[751px] xs:w-[407px] xxs:w-[358px] xm:w-[303px] h-[616px] md:h-[500px] m-auto">

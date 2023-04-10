@@ -10,6 +10,7 @@ import Offers from "./components/Offers";
 import Premium from "./components/Premium";
 import Spaces from "./components/Spaces";
 import Standard from "./components/Standard";
+import HeaderContainer from "./Containers/HeaderContainer";
 
 function App() {
 
@@ -22,11 +23,11 @@ function App() {
 
   return (
     <div>
-      <Header clickon={onclickopen}/>
+      <HeaderContainer clickon={onclickopen}/>
       <Home open={opencart}/>
       <AboutUs />
       <Standard />
-      <Premium />
+      {/* <Premium /> */}
       <Offers />
       <Spaces />
       <ContactUS />

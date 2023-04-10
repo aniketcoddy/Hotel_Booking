@@ -1,13 +1,12 @@
 import React from "react";
 import { data } from "../HotelData";
 
-
 export default function RoomSpec(props) {
-  
-  const Id = props.id
+ 
+  const Id = props.id;
 
-  const hotel=data.filter((e)=>(e.id==Id))[0]
-
+  const hotel = data.filter((e) => e.id == Id)[0];
+   
   return (
     <div
       className={`absolute flex  bg-[#583101] top-[1875px] xs:top-[1773px] lg:top-[1435px] md:top-[1164px] ${
@@ -19,37 +18,38 @@ export default function RoomSpec(props) {
           <h1 className="text-2xl text-[#F8e0a6] font-[Poppins]  border-l-8 border-[#F8e0a6] pl-2">
             {hotel.name}
           </h1>
-          <img src={hotel.img} className="w-[361px] md:w-56 lg:w-60 rounded-xl" />
+          <img
+            src={hotel.img}
+            className="w-[361px] md:w-56 lg:w-60 rounded-xl"
+          />
           <div className="flex flex-col gap-4">
-           <div className="flex items-center">
+            <div className="flex items-center">
               <img src="cup.png" className="h-5 pr-3" />
               <h1 className="text-base text-[#F8e0a6] font-[Poppins] ">
-                    {hotel.breakfast}
+                {hotel.breakfast}
               </h1>
             </div>
-           <div className="flex">
+            <div className="flex">
               <img src="sleeping.png" className="h-5 pr-3" />
               <h1 className="text-base text-[#F8e0a6] font-[Poppins] ">
                 {hotel.bed}
               </h1>
             </div>
-           <div className="flex">
+            <div className="flex">
               <img src="guest.png" className="h-5 pr-3" />
               <h1 className="text-base xs:text-sm text-[#F8e0a6] font-[Poppins] w-auto lg:w-96 ">
                 Max guests : 1 adults. The T&C for the child check-in policy
-                will
-           
-                depend on the hotel.
+                will depend on the hotel.
               </h1>
             </div>
             <div className="flex xs:flex-col xs:gap-7 gap-36 lg:gap-20">
-             <div className="flex">
+              <div className="flex">
                 <img src="expand.png" className="h-5 pr-3" />
                 <h1 className="text-base text-[#F8e0a6] font-[Poppins] ">
                   Room size:28.0 m²
                 </h1>
               </div>
-             <div className="flex">
+              <div className="flex">
                 <img src="buildings.png" className="h-5 pr-3" />
                 <h1 className="text-base text-[#F8e0a6] font-[Poppins] ">
                   City view
@@ -60,16 +60,19 @@ export default function RoomSpec(props) {
           <div className="flex flex-col gap-7">
             <div className="flex  bg-black border-2 border-solid border-white lg:w-96 md:w-64">
               <h1 className="text-4xl lg:text-2x md:text-xl  text-[white] p-3 font-[Playfair]">
-               {hotel.price}
+                {hotel.price}
               </h1>
               <h1 className="text-sm flex text-[white]  items-end pb-4 font-[Poppins] justify-end">
                 per night
               </h1>
-             <div className=" gap-2 flex  border-2 border-white xs:ml-8 h-fit md:ml-5 p-2 m-auto ml-96 lg:ml-28 rounded-md hover:cursor-pointer">
+              <div
+                className=" gap-2 flex  border-2 border-white xs:ml-8 h-fit md:ml-5 p-2 m-auto ml-96 lg:ml-28 rounded-md hover:cursor-pointer"
+                onClick={() => props.addToCartHandler({name:hotel.name,price:hotel.price,type:"Standard",id:hotel.id,image:hotel.img,quantity:hotel.quantity})}
+              >
                 <li className="font-[Poppins] text-base xs:text-sm font-semibold  text-white list-none ">
                   ADD
                 </li>
-                <img src="cart.png" className="h-6 xs:h-4"/>
+                <img src="cart.png" className="h-6 xs:h-4" />
               </div>
             </div>
           </div>

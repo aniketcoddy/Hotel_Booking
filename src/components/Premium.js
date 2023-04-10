@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RoomSpec2 from "./RoomSpec2";
+import RoomSpec2Container from '../Containers/RoomSpec2Container'
 
 export default function Premium() {
   
@@ -32,7 +33,7 @@ export default function Premium() {
 
       {slider && 
       <div>
-       <RoomSpec2 id={hotelId} slider={slider} />
+       <RoomSpec2Container id={hotelId} slider={slider} />
       </div>
 }
         <div className="flex flex-row flex-wrap  w-[911px] md:w-[751px] xs:w-[407px] xxs:w-[358px] xm:w-[303px] h-[616px] md:h-[500px] m-auto">

@@ -4,6 +4,7 @@ import Cart from "./Cart";
 import Navbar from "./Navbar";
 
 export default function Header(props) {
+  
   const [nav, setNav] = useState(false);
   const [navButton, setNavButton] = useState(0);
   const [navAppear , setNavAppear] = useState(false)
@@ -123,7 +124,9 @@ export default function Header(props) {
             </li>
           </Link>
 
+          <div className=" ml-[896.25px] mb-11 lg:ml-[695.25px] absolute flex"> <h1 className="bg-white  px-2 text-base font-bold rounded-3xl">{props.cartData.length}</h1></div>
           <div className="mr-10 gap-2 flex lg:m-auto  bg-[#583101] p-3 rounded-md hover:cursor-pointer" onClick={props.clickon} > 
+           
             <li className="font-[Poppins] text-base font-normal text-white ">
               CART
             </li>
