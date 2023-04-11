@@ -9,7 +9,7 @@ export default function RoomSpec(props) {
    
   return (
     <div
-      className={`absolute flex  bg-[#583101] top-[1875px] xs:top-[1773px] lg:top-[1435px] md:top-[1164px] ${
+      className={`absolute flex  bg-[#583101] top-[1999px] xs:top-[1773px] lg:top-[1435px] md:top-[1164px] ${
         props.slider ? "translate-x-0 xs:translate-x-40" : "translate-x-full"
       }  ease-in-out duration-300 h-fit right-0 z-10`}
     >
@@ -20,7 +20,7 @@ export default function RoomSpec(props) {
           </h1>
           <img
             src={hotel.img}
-            className="w-[361px] md:w-56 lg:w-60 rounded-xl"
+            className="w-48 md:w-56 lg:w-60 rounded-xl"
           />
           <div className="flex flex-col gap-4">
             <div className="flex items-center">
@@ -37,8 +37,8 @@ export default function RoomSpec(props) {
             </div>
             <div className="flex">
               <img src="guest.png" className="h-5 pr-3" />
-              <h1 className="text-base xs:text-sm text-[#F8e0a6] font-[Poppins] w-auto lg:w-96 ">
-                Max guests : 1 adults. The T&C for the child check-in policy
+              <h1 className="text-sm xs:text-sm text-[#F8e0a6] font-[Poppins] w-auto lg:w-96 ">
+                Max guests : 1 adults. The T&C for the child  check-in <br/> policy
                 will depend on the hotel.
               </h1>
             </div>
@@ -66,7 +66,7 @@ export default function RoomSpec(props) {
                 per night
               </h1>
               <div
-                className=" gap-2 flex  border-2 border-white xs:ml-8 h-fit md:ml-5 p-2 m-auto ml-96 lg:ml-28 rounded-md hover:cursor-pointer"
+                className=" gap-2 flex  border-2 border-white xs:ml-8 h-fit md:ml-5 p-2 m-auto ml-40 lg:ml-28 rounded-md hover:cursor-pointer"
                 onClick={() => props.addToCartHandler({name:hotel.name,price:hotel.price,type:"Standard",id:hotel.id,image:hotel.img,quantity:hotel.quantity})}
               >
                 <li className="font-[Poppins] text-base xs:text-sm font-semibold  text-white list-none ">

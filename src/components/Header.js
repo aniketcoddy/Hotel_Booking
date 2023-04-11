@@ -126,7 +126,6 @@ export default function Header(props) {
 
           <div className=" ml-[896.25px] mb-11 lg:ml-[695.25px] absolute flex"> <h1 className="bg-white  px-2 text-base font-bold rounded-3xl">{props.cartData.length}</h1></div>
           <div className="mr-10 gap-2 flex lg:m-auto  bg-[#583101] p-3 rounded-md hover:cursor-pointer" onClick={props.clickon} > 
-           
             <li className="font-[Poppins] text-base font-normal text-white ">
               CART
             </li>
@@ -140,7 +139,7 @@ export default function Header(props) {
        
       </div>
       <div className="hidden md:flex">
-           <Navbar open={navAppear} />
+           <Navbar open={navAppear} click = {props.clickon} />
         </div>
     </div>
   );

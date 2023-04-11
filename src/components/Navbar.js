@@ -11,6 +11,7 @@ export default function Navbar(props) {
        <Link spy={true} smooth={true} offset={-150} duration={1000}  to="Services"><li className="hover:bg-[#583101] hover:text-[#F8e0a6] text-[#583101]  text-xl font-[Poppins] p-2">Our Services</li></Link>
        <Link spy={true} smooth={true} offset={-120} duration={1000}  to="Spaces"><li className="hover:bg-[#583101] hover:text-[#F8e0a6] text-[#583101]  text-xl font-[Poppins] p-2">Our Space</li></Link>
        <Link spy={true} smooth={true} offset={-200} duration={1000}  to="Contact"><li className="hover:bg-[#583101] hover:text-[#F8e0a6] text-[#583101]  text-xl font-[Poppins] p-2">Contact Us</li></Link>
+     <li className="hover:bg-[#583101] hover:text-[#F8e0a6] text-[#583101]  text-xl font-[Poppins] p-2" onClick={props.click}>Cart</li>
       </ul>
       </div>
     </div>

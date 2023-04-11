@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div>
-      <HeaderContainer clickon={onclickopen}/>
+      <HeaderContainer  clickon={onclickopen}/>
       <Home open={opencart}/>
       <AboutUs />
       <Standard />
