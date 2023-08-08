@@ -9,7 +9,7 @@ export default function RoomSpec(props) {
    
   return (
     <div
-      className={`absolute flex  bg-[#583101] top-[1999px] xs:top-[1773px] lg:top-[1435px] md:top-[1164px] ${
+      className={`absolute flex  bg-[#583101] top-[2710px] 5xl:top-[2343px] 4xl:top-[2183px] 3xl:top-[1701px] 2xl:top-[1564px] xl:top-[1356px]  xs:top-[1281px] lg:top-[1217px] md:top-[1164px] ${
         props.slider ? "translate-x-0 xs:translate-x-40" : "translate-x-full"
       }  ease-in-out duration-300 h-fit right-0 z-10`}
     >

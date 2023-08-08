@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import RoomSpec from "./RoomSpec";
 import RoomSpecContainer from "../Containers/RoomSpecContainer"
+import { Element } from "react-scroll";
 
 export default function Standard() {
   const [slider2 , setSlider2] = useState(false)
@@ -15,7 +16,7 @@ export default function Standard() {
  
 
   return (
-    <div className=" h-fit mt-36" id="Services">
+    <div className=" h-fit mt-36" id="services">
       <div className="flex flex-col m-9 gap-5">
         <div className="flex flex-row items-center xm:justify-center">
           <h2 className="font-[Playfair] text-2xl text-[#583101] xm:text-3xl">
@@ -44,7 +45,7 @@ export default function Standard() {
       </div>
 }               
         <div className="flex flex-row flex-wrap  w-[911px] md:w-[751px] xs:w-[407px] xxs:w-[358px] xm:w-[303px] h-[616px] md:h-[500px] m-auto">
-          <div title={1} className="hover:cursor-pointer" onClick={slideronclick}>
+          <div title={1} className="hover:cursor-pointer "  onClick={slideronclick}>
             <img
               src="room5.png"
               className="h-[415px] md:h-[340px] xs:h-[570px]  xxs:h-[499px] p-1 xm:h-[423px]"
@@ -123,5 +124,6 @@ export default function Standard() {
 
         </div>
     </div>
+ 
   );
 }

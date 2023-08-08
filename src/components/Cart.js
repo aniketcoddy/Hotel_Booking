@@ -3,7 +3,7 @@ import {removeToCart} from '../Services/Actions/Actions'
 import { useDispatch } from 'react-redux';
 
 
-export default function Cart(props) {
+export default function Cart() {
      const cartData = useSelector((state)=>state.cardItems)
   const dispatch = useDispatch()
 
@@ -12,7 +12,7 @@ export default function Cart(props) {
   
   
   return (
-    <div className={`absolute -mt-96  bg-[#F8e0a6] z-30  w-[816px] ${props.close ?"-translate-x-[67px]":"translate-x-full"} ease-in-out duration-700`} >
+    <div className={`absolute -mt-96  bg-[#F8e0a6] z-30  w-[816px] ease-in-out duration-700`}>
  
      
       <h1 className="flex items-center justify-center text-[#583101] text-2xl  font-[Playfair]">CART</h1>

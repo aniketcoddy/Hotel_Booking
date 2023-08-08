@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Element } from "react-scroll";
 
-import Cart from "./Cart";
-
-export default function Home(props) {
+export default function Home() {
   return (
-    <div className="flex justify-center items-center mt-24" id="Home">
+  
+    <div className="flex justify-center items-center mt-24" id="home">
+       
       <img src="home.png" className="w-full" />
       <div className="flex flex-col absolute gap-24 lg:gap-16 md:gap-14 sm:gap-9 xs:gap-4 xm:gap-4">
         <h1 className="font-[Playfair] text-3xl sm:text-2xl xs:text-xl xxs:text-base xm:text-xs text-[#F8e0a6] text-center">
@@ -19,10 +20,8 @@ export default function Home(props) {
           </h1>
         </a>
       </div>
-
-      <div className="fixed z-10">
-        <Cart close={props.open} />
-      </div>
+   
     </div>
+   
   );
 }
