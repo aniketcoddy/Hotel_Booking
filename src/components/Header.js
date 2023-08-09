@@ -47,8 +47,8 @@ export default function Header(props) {
           />
         </NavLink>
         <ul className="flex items-center md:hidden">
-          <ScrollLink
-            to="home"
+          <Link
+            to="/"
             activeClass="active"
             spy={true}
             smooth={true}
@@ -60,7 +60,7 @@ export default function Header(props) {
             }}
           >
             <li className="font-[Poppins] 3xl:text-base 5xl:text-3xl  4xl:text-2xl  lg:text-sm text-4xl font-normal  p-2">Home</li>
-          </ScrollLink>
+          </Link>
 
           <ScrollLink
             to="about"
@@ -83,7 +83,7 @@ export default function Header(props) {
             activeClass="active"
             spy={true}
             smooth={true}
-            offset={-250}
+            offset={-150}
             duration={700}
             className={navButton == 3 ? activeButton : InactiveButton}
             onClick={() => {
@@ -132,7 +132,7 @@ export default function Header(props) {
             <div className=" ml-[175px] mb-[135px] 5xl:mb-28 5xl:ml-32 4xl:mb-24 4xl:ml-28 3xl:mb-20 3xl:ml-16  absolute flex">
               <h1 className="bg-white px-2 absolute 3xl:text-base 5xl:text-3xl  4xl:text-2xl  lg:text-sm text-2xl font-bold rounded-3xl">{props.cartData.length}</h1>
             </div>
-            <a className="font-[Poppins] 3xl:text-base 5xl:text-3xl  4xl:text-2xl  lg:text-sm text-4xl font-normal text-white ">CART</a>
+            <Link to="/cart" className="font-[Poppins] 3xl:text-base 5xl:text-3xl  4xl:text-2xl  lg:text-sm text-4xl font-normal text-white ">CART</Link>
             <img src="cart.png" className="3xl:h-6 5xl:h-14 4xl:h-10 h-16" />
           </div>
 

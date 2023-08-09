@@ -1,26 +1,22 @@
 import "./App.css";
-import AboutUs from "./components/AboutUs";
-import ContactUS from "./components/ContactUS";
-import Home from "./components/Home";
-import Offers from "./components/Offers";
-import Spaces from "./components/Spaces";
-import Standard from "./components/Standard";
+
+import Cart from "./components/Cart";
+
 import HeaderContainer from "./Containers/HeaderContainer";
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
+import HomePage from "./pages/HomePage";
+import CartPage from "./pages/CartPage";
 
 function App() {
 
   return (
     <div>
-      <Router>
+      <Router>  
         <HeaderContainer />
-        <Home />
-        <AboutUs />
-        <Standard/>
-        <Offers />
-        <Spaces />
-        <ContactUS />
-        {/* <Premium /> */}
+        <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/cart" element={<CartPage/>}/>
+        </Routes>
       </Router>
     </div>
   );
